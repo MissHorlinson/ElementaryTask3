@@ -26,18 +26,22 @@ public class TriangleController {
         float sideC = validator.toFloat(triangleArray[3]);
 
         if(triangleArray.length == 4 && validator.isSideCorrect(sideA, sideB, sideC)) {
-            if(validator.isSuchTriangleExist(sideA, sideB, sideC)) {
-            model = new TriangleModel(triangleArray[0], sideA, sideB, sideC);
-            service.triangleArea(model);
-            return model;
-            } else {
-                output.wrongSides();
-                return null;
-            }
+            return isTriangleExist(triangleArray[0], sideA, sideB, sideC);
         } else {
             output.triangleCreateError();
             return null;
         }
+    }
+
+    public TriangleModel isTriangleExist(String name, float sideA, float sideB, float sideC) {
+        if(validator.isSuchTriangleExist(sideA, sideB, sideC)) {
+            model = new TriangleModel(name, sideA, sideB, sideC);
+            service.triangleArea(model);
+            return model;
+        } else {
+            output.wrongSides();
+            return null;
+            }
     }
 
     public String[] enterAndSplit() {
