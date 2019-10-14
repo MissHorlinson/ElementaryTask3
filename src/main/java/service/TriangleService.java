@@ -1,5 +1,5 @@
 package service;
-import model.TriangleModel;
+import model.*;
 
 public class TriangleService {
 

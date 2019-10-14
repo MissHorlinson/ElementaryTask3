@@ -1,11 +1,9 @@
 package controller;
-
 import util.*;
 import model.*;
 import service.*;
 import java.util.ArrayList;
 import java.util.Collections;
-
 
 public class TriangleController {
     private Input input = new Input();
@@ -50,9 +48,6 @@ public class TriangleController {
     public void sortCollection(ArrayList<TriangleModel> triangleList) {
         Collections.sort(triangleList, Collections.reverseOrder());
         output.triangleList(triangleList);
-        /*for (TriangleModel triangle : triangleList) {
-            System.out.println(triangle);
-        }*/
     }
 
     public boolean shouldContinue() {

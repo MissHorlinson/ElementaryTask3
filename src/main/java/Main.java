@@ -7,8 +7,7 @@ public class Main {
     static ArrayList<TriangleModel> triangleList = new ArrayList<TriangleModel>();
 
     public static void main(String[] args) {
-        //while (true) {
-        for (;;) {
+        while (true) {
             TriangleController controller = new TriangleController();
             controller.addToCollection(triangleList);
             //controller.sortCollection(triangleList);

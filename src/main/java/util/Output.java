@@ -1,9 +1,6 @@
 package util;
-
 import model.TriangleModel;
-
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Output {
 
@@ -29,7 +26,6 @@ public class Output {
 
     public void triangleList(ArrayList<TriangleModel> triangleList) {
         System.out.println("================ Triangle list: ================");
-        //Collections.sort(triangleList, Collections.reverseOrder());
         for (TriangleModel triangle : triangleList) {
             System.out.println(triangle);
         }
