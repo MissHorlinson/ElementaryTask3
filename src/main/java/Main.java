@@ -10,7 +10,6 @@ public class Main {
         while (true) {
             TriangleController controller = new TriangleController();
             controller.addToCollection(triangleList);
-            //controller.sortCollection(triangleList);
             if(!controller.shouldContinue()) {
                 controller.sortCollection(triangleList);
                 break;
