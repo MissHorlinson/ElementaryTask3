@@ -8,8 +8,8 @@ import java.util.Collections;
 public class TriangleController {
     private Input           input = new Input();
     private Output          output = new Output();
-    private TriangleService service = new TriangleService();
     private Validator       validator = new Validator();
+    private TriangleService service = new TriangleService();
     private TriangleModel   model;
 
     public TriangleController() {}
