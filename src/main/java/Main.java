@@ -11,7 +11,7 @@ public class Main {
             TriangleController controller = new TriangleController();
             controller.addToCollection(triangleList);
             if(!controller.shouldContinue()) {
-                controller.sortCollection(triangleList);
+                controller.showTriangleList(triangleList);
                 break;
             }
         }

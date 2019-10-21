@@ -1,7 +1,6 @@
 package util;
 
 public class Validator {
-    private Input input = new Input();
 
     public String[] enterAndSplit(String string) {
         if(!string.isEmpty()) {

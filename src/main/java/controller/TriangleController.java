@@ -6,17 +6,22 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class TriangleController {
-    private Input input = new Input();
-    private Output output = new Output();
-    private TriangleModel model;
+    private Input           input = new Input();
+    private Output          output = new Output();
     private TriangleService service = new TriangleService();
-    private Validator validator = new Validator();
+    private Validator       validator = new Validator();
+    private TriangleModel   model;
 
     public TriangleController() {}
 
     public void addToCollection(ArrayList<TriangleModel> triangleList) {
         TriangleModel newTriangle = createTriangle(enterAndSplit());
         triangleList.add(newTriangle);
+    }
+
+    public String[] enterAndSplit() {
+        output.startInfo();
+        return validator.enterAndSplit(input.getString());
     }
 
     public TriangleModel createTriangle(String[] triangleArray) {
@@ -44,14 +49,8 @@ public class TriangleController {
             }
     }
 
-    public String[] enterAndSplit() {
-        output.startInfo();
-        return validator.enterAndSplit(input.getString());
-    }
-
-    public void sortCollection(ArrayList<TriangleModel> triangleList) {
-        Collections.sort(triangleList, Collections.reverseOrder());
-        output.triangleList(triangleList);
+    public void showTriangleList(ArrayList<TriangleModel> triangleList) {
+        output.triangleList(service.sortCollection(triangleList));
     }
 
     public boolean shouldContinue() {
