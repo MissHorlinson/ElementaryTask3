@@ -1,15 +1,16 @@
 package model;
 
-public class TriangleModel implements Comparable {
+public class Triangle implements Comparable {
+
     private String name;
     private float sideA;
     private float sideB;
     private float sideC;
     private double S;
 
-    public TriangleModel() {}
+    public Triangle() { }
 
-    public TriangleModel(String name, float sideA, float sideB, float sideC) {
+    public Triangle(String name, float sideA, float sideB, float sideC) {
         this.name = name;
         this.sideA = sideA;
         this.sideB = sideB;
@@ -38,7 +39,7 @@ public class TriangleModel implements Comparable {
 
     @Override
     public int compareTo(Object o) {
-        TriangleModel triangle = (TriangleModel)o;
+        Triangle triangle = (Triangle)o;
         if(this.getS() < triangle.getS()) {
             return -1;
         } else {

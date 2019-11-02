@@ -1,5 +1,5 @@
 package util;
-import model.TriangleModel;
+import model.Triangle;
 import java.util.ArrayList;
 
 public class Output {
@@ -9,7 +9,15 @@ public class Output {
     }
 
     public void newTriangle() {
-        System.out.println("Creating new triangle");
+        System.out.println("Trying create triangle...");
+    }
+
+    public void notAllParameters() {
+        System.out.println("You didn`t enter all parameters");
+    }
+
+    public void wrongData() {
+        System.out.println("Not valid data");
     }
 
     public void wrongSides() {
@@ -24,9 +32,9 @@ public class Output {
         System.out.println("Enter y - yes, if you want to continue ?");
     }
 
-    public void triangleList(ArrayList<TriangleModel> triangleList) {
+    public void triangleList(ArrayList<Triangle> triangleList) {
         System.out.println("================ Triangle list: ================");
-        for (TriangleModel triangle : triangleList) {
+        for (Triangle triangle : triangleList) {
             System.out.println(triangle);
         }
     }

@@ -1,10 +1,10 @@
 import controller.TriangleController;
-import model.TriangleModel;
+import model.Triangle;
 
 import java.util.ArrayList;
 
 public class Main {
-    static ArrayList<TriangleModel> triangleList = new ArrayList<TriangleModel>();
+    static ArrayList<Triangle> triangleList = new ArrayList<Triangle>();
 
     public static void main(String[] args) {
         while (true) {
